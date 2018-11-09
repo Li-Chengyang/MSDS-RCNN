@@ -7,8 +7,10 @@ Demo code of our paper [Multispectral Pedestrian Detection via Simultaneous Dete
 
 ### Demo
 0. Prerequisites
-  Basic Tensorflow and Python package installation.
-  This code is tested on Ubuntu14.04, tf1.2, Python2.7 and Ubuntu16.04, tf1.11, Python3.5.
+
+　Basic Tensorflow and Python package installation.
+  
+　This code is tested on [Ubuntu14.04, tf1.2, Python2.7] and [Ubuntu16.04, tf1.11, Python3.5].
 
 1. Clone the repository
   ```Shell
@@ -30,9 +32,14 @@ Demo code of our paper [Multispectral Pedestrian Detection via Simultaneous Dete
   ```
 
 4. Download the pre-trained model
-[One driver](https://1drv.ms/u/s!AtMRVLTL5T5eb5_kGuk3AZxDT4o) trained on KAIST using original training annotaions.
-Untar files to output/vgg16/.
 
+　VGG16 model [[One driver]](https://1drv.ms/u/s!AtMRVLTL5T5eb5_kGuk3AZxDT4o) trained on KAIST using original training annotaions.
+  ```Shell
+  # Untar files to output/vgg16/
+  cd output/vgg16
+  tar -xvf pretrained_model.tar
+  ```
+  
 5. Run demo 
   ```Shell
   python tools/demo.py
