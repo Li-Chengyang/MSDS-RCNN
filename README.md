@@ -19,7 +19,7 @@ Demo code of our paper [Multispectral Pedestrian Detection via Simultaneous Dete
 
 2. Update your -arch in setup script to match your GPU
   ```Shell
-  cd msds-rcnn/lib
+  cd MSDS-RCNN/lib
   # Change the GPU architecture (-arch) if necessary
   vim setup.py
   ```
@@ -69,11 +69,12 @@ Thanks to Xinlei Chen, this pipeline is largely built on his example tensorflow 
 If you find our work useful in your research, please consider citing:
 
 ```
-@article{li2018multispectral,
-  title={Multispectral Pedestrian Detection via Simultaneous Detection and Segmentation},
-  author={Li, Chengyang and Song, Dan and Tong, Ruofeng and Tang, Min},
-  journal={arXiv preprint arXiv:1808.04818},
-  year={2018}
+@InProceedings{li_2018_BMVC,
+  author = {Li, Chengyang and Song, Dan and Tong, Ruofeng and Tang, Min},
+  title = {Multispectral Pedestrian Detection via Simultaneous Detection and Segmentation},
+  booktitle = {British Machine Vision Conference (BMVC)},
+  month = {September}
+  year = {2018}
 }
 ```
 
