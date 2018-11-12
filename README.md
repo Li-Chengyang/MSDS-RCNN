@@ -52,14 +52,6 @@ Demo code of our paper [Multispectral Pedestrian Detection via Simultaneous Dete
 **Note**: 
 Since the original annotations of the test set contain many problematic bounding boxes, we use the [improved testing annotations](http://paul.rutgers.edu/%7Ejl1322/multispectral.htm) provided by Liu et al. to enable a reliable comparison.
 
-### Downloads
-
-[Human baseline](https://drive.google.com/open?id=1hNLSRPpQWRANf62kG58X6dI4uIMKwL3n)
-
-[Sanitized training annotations](https://goo.gl/forms/Lfgd3vcx4ZrFxs0J3)
-
-[Detection results](https://drive.google.com/open?id=1MLejnwZr7C1imUa9emyVJiUH5CxbYw-T)
-
 ### Acknowledgements
 
 Thanks to Xinlei Chen, this pipeline is largely built on his example tensorflow Faster R-CNN code available at:
