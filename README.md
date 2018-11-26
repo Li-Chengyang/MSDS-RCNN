@@ -33,16 +33,26 @@ Demo code of our paper [Multispectral Pedestrian Detection via Simultaneous Dete
 
 4. Download the pre-trained model
 
-　VGG16 model [[One driver]](https://1drv.ms/u/s!AtMRVLTL5T5eb5_kGuk3AZxDT4o) trained on KAIST using original training annotaions.
+　VGG16 model [TBA] trained on KAIST using original training annotaions.
+
+　VGG16 model [TBA] trained on KAIST using sanitized training annotaions.
   ```Shell
-  # Untar files to output/vgg16/
-  cd output/vgg16
-  tar -xvf pretrained_model.tar
+  # Untar files to output/
+  cd output
+  tar -xvf pretrained.tar
+  tar -xvf pretrained_sanitized.tar
   ```
   
-5. Run demo 
+5. Run demo
+
+　Model pre-trained on the orignial training annotations
   ```Shell
   python tools/demo.py
+  ```
+
+　Model pre-trained on the sanitized training annotations
+  ```Shell
+  python tools/demo.py --dataset sanitized
   ```
 
 ### Detection performance

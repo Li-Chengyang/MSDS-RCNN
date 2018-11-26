@@ -29,8 +29,9 @@ from nets.vgg16 import vgg16
 CLASSES = ('__background__',
            'person')
 
-NETS = {'vgg16': ('vgg16_msds_rcnn_iter_45606.ckpt',)}
-DATASETS= {'kaist': ('kaist_train-all02_multi_50np',)}
+NETS = {'vgg16': 'vgg16_msds_rcnn_final.ckpt'}
+DATASETS= {'original': 'pretrained',
+           'sanitized': 'pretrained_sanitized'}
 
 def vis_detections(im, dets, thresh=0.5):
   """Draw detected bounding boxes."""
@@ -114,7 +115,7 @@ def parse_args():
   parser.add_argument('--net', dest='demo_net', help='Currently only support vgg16',
                       choices=NETS.keys(), default='vgg16')
   parser.add_argument('--dataset', dest='dataset', help='Trained dataset',
-                      choices=DATASETS.keys(), default='kaist')
+                      choices=DATASETS.keys(), default='original')
   args = parser.parse_args()
 
   return args
@@ -125,8 +126,7 @@ if __name__ == '__main__':
   # model path
   demonet = args.demo_net
   dataset = args.dataset
-  tfmodel = os.path.join('output', demonet, DATASETS[dataset][0], 'default',
-                         NETS[demonet][0])
+  tfmodel = os.path.join('output', DATASETS[dataset], NETS[demonet])
 
   if not os.path.isfile(tfmodel + '.meta'):
     raise IOError('{:s} not found.\n Please download the pre-trained model and place it properly.'
@@ -153,9 +153,10 @@ if __name__ == '__main__':
 
   print('Loaded network {:s}'.format(tfmodel))
 
-  im_names = ['set06_V001_I00459', 'set08_V002_I01419',
-              'set09_V000_I01139', 'set09_V000_I01959',
-              'set10_V001_I03279', 'set11_V000_I00159']
+  im_names = ['set06_V001_I00459', 'set08_V001_I02579',
+              'set08_V002_I01419', 'set09_V000_I01139',
+              'set09_V000_I01959', 'set10_V001_I03279',
+              'set11_V000_I00159', 'set11_V000_I01279']
 
   for im_name in im_names:
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
