@@ -44,7 +44,7 @@ for ie = 1:9
 end
 
 if writeRes
-    save(fullfile(dtDir, '..', ['res' tname(4:end) '.mat']), 'res');
+    save(fullfile(dtDir(1:end-length('/det')), ['res' tname(4:end) '.mat']), 'res');
     fprintf('Results saved.\n');
 end
 
@@ -55,7 +55,7 @@ function bbsNms = aggreg_dets(dtDir, reval, tname)
 % bbsNm.test-all
 for cond = [{'test-all'}, {'test-day'}, {'test-night'}]
     desName = [tname '-' cond{1} '.txt'];
-    desName = fullfile(dtDir, '..', desName);
+    desName = fullfile(dtDir(1:end-length('/det')), desName);
     bbsNms.(sprintf('%s', strrep(cond{1}, '-', '_'))) = desName;
     if exist(desName, 'file') && ~reval
         continue;
