@@ -33,9 +33,9 @@ Demo code of our paper [Multispectral Pedestrian Detection via Simultaneous Dete
 
 4. Download the pre-trained model
 
-　VGG16 model [TBA] trained on KAIST using original training annotaions.
+　VGG16 model [[OneDrive]](https://zjueducn-my.sharepoint.com/:u:/g/personal/licy_cs_zju_edu_cn/EU2AEq-VibhPvTvavkM77C8B8o-vG8akiGhlexwNQ8g7fQ?e=nGO5F9) trained on KAIST using original training annotaions.
 
-　VGG16 model [TBA] trained on KAIST using sanitized training annotaions.
+　VGG16 model [[OneDrive]](https://zjueducn-my.sharepoint.com/:u:/g/personal/licy_cs_zju_edu_cn/EUTtXDnU3vpBoM_0xyGNrRQB1BxFmcwbnIrY3ZHnIYYErw?e=6bbOYC) trained on KAIST using sanitized training annotaions.
   ```Shell
   # Untar files to output/
   cd output
