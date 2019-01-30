@@ -280,7 +280,11 @@ __C.POOLING_MODE = 'crop'
 __C.POOLING_SIZE = 7
 
 # Anchor scales for RPN
+# For original training data
 __C.ANCHOR_SCALES = [2.32,2.69,3.06,3.52,4.06,4.63,5.47,6.85,13.68]
+# For sanitized training data
+# The slight difference is due to training data statistics
+__C.ANCHOR_SCALES_SANITIZED = [2.32,2.63,2.90,3.30,3.76,4.35,5.02,6.52,13.25]
 
 # Anchor ratios for RPN
 __C.ANCHOR_RATIOS = [1/.41]

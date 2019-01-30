@@ -145,6 +145,8 @@ if __name__ == '__main__':
     raise NotImplementedError
 
   # load model
+  if args.dataset == 'sanitized':
+    cfg.ANCHOR_SCALES = cfg.ANCHOR_SCALES_SANITIZED
   net.create_architecture_demo("TEST", len(CLASSES), tag='default',
                                anchor_scales=cfg.ANCHOR_SCALES,
                                anchor_ratios=cfg.ANCHOR_RATIOS)
